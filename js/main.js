@@ -1,5 +1,5 @@
 /**
- * HG Gongs Consulting Engineers
+ * Thomani Consulting
  */
 (function () {
   'use strict';
