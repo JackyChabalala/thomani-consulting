@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thomani Consulting</title>
-<meta name="description" content="Thomani Consulting — civil engineering, construction management, and SACPCMP mentorship. Led by Mr Vusimuzi Valoyi, Pr CM.">
+<meta name="description" content="Thomani Consulting — civil engineering, construction management, and tender pricing. Led by Mr Vusimuzi Valoyi, Pr CM.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
@@ -19,13 +19,57 @@
     <button type="button" class="mentor-popup-x" data-popup-close aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
-    <span class="mentor-popup-badge">SACPCMP Mentorship</span>
-    <h2 id="mentorPopupTitle">Ready for professional registration?</h2>
-    <p>Join our Road to Registration programme for Pr CM and Pr CPM aspirants — structured guidance for your SACPCMP journey.</p>
+    <span class="mentor-popup-badge">Tender pricing</span>
+    <h2 id="mentorPopupTitle">Need pricing for your RFQ or Tender Document?</h2>
+    <p>Accurate tender estimation and RFQ pricing support — clear, professional cost estimates aligned to your project scope and documentation.</p>
     <div class="mentor-popup-actions">
-      <a href="#mentorship" class="btn btn-brand" id="mentorPopupCta">Explore mentorship</a>
+      <a href="#tender-pricing" class="btn btn-brand" id="mentorPopupCta">Explore Tender pricing</a>
       <button type="button" class="btn btn-ghost-dark" data-popup-close>Continue browsing</button>
     </div>
+  </div>
+</div>
+
+<div class="service-lightbox" id="serviceLightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="serviceLightboxTitle">
+  <div class="service-lightbox-backdrop" data-lightbox-close></div>
+  <div class="service-lightbox-shell">
+    <button type="button" class="service-lightbox-close" data-lightbox-close aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <button type="button" class="service-lightbox-nav service-lightbox-prev" id="serviceLightboxPrev" aria-label="Previous service">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button type="button" class="service-lightbox-nav service-lightbox-next" id="serviceLightboxNext" aria-label="Next service">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="service-lightbox-media">
+      <img id="serviceLightboxImg" src="" alt="">
+    </div>
+    <div class="service-lightbox-panel">
+      <p class="service-lightbox-count" id="serviceLightboxCount"></p>
+      <h2 id="serviceLightboxTitle"></h2>
+      <p id="serviceLightboxDesc"></p>
+      <a href="#contact" class="btn btn-brand" id="serviceLightboxInquire">Enquire about this service</a>
+    </div>
+  </div>
+</div>
+
+<div class="photo-lightbox" id="photoLightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project photo viewer">
+  <div class="photo-lightbox-backdrop" data-photo-close></div>
+  <button type="button" class="photo-lightbox-close" data-photo-close aria-label="Close photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <button type="button" class="photo-lightbox-nav photo-lightbox-prev" id="photoLightboxPrev" aria-label="Previous photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button type="button" class="photo-lightbox-nav photo-lightbox-next" id="photoLightboxNext" aria-label="Next photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="photo-lightbox-stage">
+    <img id="photoLightboxImg" src="" alt="">
+  </div>
+  <div class="photo-lightbox-meta">
+    <p id="photoLightboxTitle"></p>
+    <span id="photoLightboxCount"></span>
   </div>
 </div>
 
@@ -46,7 +90,7 @@
       <li><a href="#about" data-nav="about">About</a></li>
       <li><a href="#leadership" data-nav="leadership">Leadership</a></li>
       <li><a href="#services" data-nav="services">Services</a></li>
-      <li><a href="#mentorship" data-nav="mentorship">Mentorship</a></li>
+      <li><a href="#tender-pricing" data-nav="mentorship">Tender pricing</a></li>
       <li><a href="#projects" data-nav="projects">Projects</a></li>
       <li><a href="#community" data-nav="community">Community</a></li>
       <li><a href="#careers" data-nav="careers">Careers</a></li>
@@ -77,9 +121,9 @@
       <svg class="nav-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
       <span>Services</span>
     </a>
-    <a href="#mentorship" data-nav="mentorship" onclick="closeMobile()">
+    <a href="#tender-pricing" data-nav="mentorship" onclick="closeMobile()">
       <svg class="nav-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 10l-10-5L2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5"/><path d="M22 10v6"/></svg>
-      <span>Mentorship</span>
+      <span>Tender pricing</span>
     </a>
     <a href="#projects" data-nav="projects" onclick="closeMobile()">
       <svg class="nav-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
@@ -110,22 +154,30 @@
   <!-- Split hero -->
   <section class="hero" id="home" data-section="home">
     <div class="hero-panel">
-      <p class="hero-eyebrow anim">Consulting Engineers · South Africa</p>
+      <p class="hero-eyebrow anim">Construction services</p>
       <h1 class="hero-title anim anim-d1">
         Building excellence
         <em>through engineering innovation</em>
       </h1>
       <p class="hero-lead anim anim-d2">
-        Thomani partners with clients across the built environment — from planning and design through construction management to professional mentorship.
+        Thomani partners with clients across the built environment — from planning and design through construction management to Tender pricing.
       </p>
       <div class="hero-actions anim anim-d3">
         <a href="#services" class="btn btn-solid">Explore services</a>
-        <a href="#mentorship" class="btn btn-ghost">SACPCMP mentorship</a>
+        <a href="#tender-pricing" class="btn btn-ghost">Tender pricing</a>
       </div>
       <div class="hero-contacts anim">
-        <a href="tel:0767911676" class="hero-chip">
+        <a href="tel:0678542627" class="hero-chip">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.92.33 1.86.57 2.81.7a2 2 0 011.72 2.25z"/></svg>
-          076 7911 676
+          067 854 2627
+        </a>
+        <a href="tel:0766487205" class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.92.33 1.86.57 2.81.7a2 2 0 011.72 2.25z"/></svg>
+          076 648 7205
+        </a>
+        <a href="mailto:info@thomani.co.za" class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          Email
         </a>
       </div>
     </div>
@@ -182,17 +234,18 @@
           <div class="core-services">
             <h3 class="core-services-title">Our core business</h3>
             <ul class="core-grid">
-              <li>Civil Engineering</li>
+              <li>Tender Pricing</li>
               <li>Roads and Transportation</li>
               <li>Water and Sanitation</li>
               <li>Stormwater Management</li>
               <li>Municipal Infrastructure</li>
               <li>Construction Management</li>
-              <li>Contracts Management</li>
-              <li>Project and Programme Management</li>
+              <li>Civil Engineering</li>
+              <li>Construction material testing</li>
               <li>Infrastructure Planning and Advisory</li>
               <li>Professional Mentorship</li>
-              <li>Geomatics </li>
+              <li>Surveying</li>
+              <li>Skills Development and Training</li>
             </ul>
           </div>
 
@@ -260,26 +313,47 @@
       </div>
 
       <div class="team-grid anim" id="profile">
-        <article class="team-card team-card--lead">
-          <div class="team-photo">
-            <img src="images/Owner.jpg" alt="Mr Vusimuzi Valoyi, Managing Director" width="760" height="760" loading="lazy">
-          </div>
-          <div class="team-info">
-            <h4>Mr Vusimuzi Valoyi</h4>
-            <div class="role">Managing Director · Pr CM</div>
-            <p>A highly accomplished and results-driven Professional Construction Manager (Pr.CM) and qualified Civil Engineering Technologist with over 18 years of experience in the consulting and construction sectors.</p>
-          </div>
-        </article>
-        
-        
         <article class="team-card">
           <div class="team-photo">
-            <img src="images/Owner2.jpg" alt="Ms Rixaladza Makhubele, Tender Administrator" width="760" height="760" loading="lazy">
+            <img src="images/Admin.png" alt="Ms Lerato Mokoena, Tender Administrator" width="760" height="760" loading="lazy">
           </div>
           <div class="team-info">
-            <h4>Ms Rixaladza Makhubele</h4>
+            <h4>Ms Lerato Mokoena</h4>
             <div class="role">Tender Administrator</div>
             <p>Supports tender preparation, documentation control, and administrative coordination across Thomani project and mentorship programmes.</p>
+          </div>
+        </article>
+
+        <article class="team-card team-card--empty" aria-label="Team member placeholder">
+          <div class="team-photo team-photo--empty">
+            <span></span>
+          </div>
+          <div class="team-info">
+            <h4>Coming soon</h4>
+            <div class="role">Team member</div>
+            <p>Profile will be added here.</p>
+          </div>
+        </article>
+
+        <article class="team-card team-card--empty" aria-label="Team member placeholder">
+          <div class="team-photo team-photo--empty">
+            <span></span>
+          </div>
+          <div class="team-info">
+            <h4>Coming soon</h4>
+            <div class="role">Team member</div>
+            <p>Profile will be added here.</p>
+          </div>
+        </article>
+
+        <article class="team-card team-card--empty" aria-label="Team member placeholder">
+          <div class="team-photo team-photo--empty">
+            <span></span>
+          </div>
+          <div class="team-info">
+            <h4>Coming soon</h4>
+            <div class="role">Team member</div>
+            <p>Profile will be added here.</p>
           </div>
         </article>
       </div>
@@ -297,103 +371,114 @@
         <p class="lead">Integrated consulting across the project lifecycle — clear capability areas from inception to completion.</p>
       </div>
 
-      <div class="bento bento-compact reveal-stagger">
-        <a class="bento-card bento-card--visual anim-scale" href="#contact">
-          <img class="bento-card-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" loading="lazy">
+      <div class="bento bento-compact reveal-stagger" id="servicesGrid">
+        <a class="bento-card bento-card--visual anim-scale js-service-card" href="#services" data-service-index="0">
+          <img class="bento-card-img" src="images/1.jpeg" alt="" loading="lazy">
           <div class="bento-card-overlay"></div>
           <div class="bento-card-body">
+            <span class="service-hint">Click to view</span>
             <h3>Construction Management</h3>
             <p>Lifecycle management, site coordination, and SACPCMP-aligned delivery leadership.</p>
           </div>
         </a>
 
-        <a class="bento-card bento-card--visual anim" href="#contact" id="service-civil">
-          <img class="bento-card-img" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" loading="lazy">
+        <a class="bento-card bento-card--visual anim js-service-card" href="#services" id="service-civil" data-service-index="1">
+          <img class="bento-card-img" src="images/2.jpeg" alt="" loading="lazy">
           <div class="bento-card-overlay"></div>
           <div class="bento-card-body">
+            <span class="service-hint">Click to view</span>
             <h3>Civil Engineering</h3>
             <p>Site feasibility, structural review, and multidisciplinary engineering inputs.</p>
           </div>
         </a>
 
-        <a class="bento-card bento-card--visual anim" href="#contact">
-          <img class="bento-card-img" src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" loading="lazy">
+        <a class="bento-card bento-card--visual anim js-service-card" href="#services" data-service-index="2">
+          <img class="bento-card-img" src="images/3.jpeg" alt="" loading="lazy">
           <div class="bento-card-overlay"></div>
           <div class="bento-card-body">
+            <span class="service-hint">Click to view</span>
             <h3>Roads and Transportation</h3>
             <p>Geometric design, pavement assessments, and traffic impact studies.</p>
           </div>
         </a>
 
-        <a class="bento-card bento-card--visual anim" href="#contact">
-          <img class="bento-card-img" src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" loading="lazy">
+        <a class="bento-card bento-card--visual anim js-service-card" href="#services" data-service-index="3">
+          <img class="bento-card-img" src="images/4.jpeg" alt="" loading="lazy">
           <div class="bento-card-overlay"></div>
           <div class="bento-card-body">
+            <span class="service-hint">Click to view</span>
             <h3>Water and Sanitation</h3>
             <p>Water reticulation, sanitation systems, and municipal network planning.</p>
           </div>
         </a>
 
-        <a class="bento-card bento-card--visual anim" href="#contact">
-          <img class="bento-card-img" src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" loading="lazy">
+        <a class="bento-card bento-card--visual anim js-service-card" href="#services" data-service-index="4">
+          <img class="bento-card-img" src="images/5.jpeg" alt="" loading="lazy">
           <div class="bento-card-overlay"></div>
           <div class="bento-card-body">
+            <span class="service-hint">Click to view</span>
             <h3>Stormwater Management</h3>
             <p>Drainage design, flood mitigation, and stormwater infrastructure.</p>
           </div>
         </a>
 
-        <a class="bento-card bento-card--visual anim" href="#contact">
-          <img class="bento-card-img" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" loading="lazy">
+        <a class="bento-card bento-card--visual anim js-service-card" href="#services" data-service-index="5">
+          <img class="bento-card-img" src="images/6.jpeg" alt="" loading="lazy">
           <div class="bento-card-overlay"></div>
           <div class="bento-card-body">
+            <span class="service-hint">Click to view</span>
             <h3>Municipal Infrastructure</h3>
             <p>Community infrastructure rollout and public-sector programme support.</p>
           </div>
         </a>
 
-        <a class="bento-card bento-card--visual anim" href="#contact">
-          <img class="bento-card-img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" loading="lazy">
+        <a class="bento-card bento-card--visual anim js-service-card" href="#services" data-service-index="6">
+          <img class="bento-card-img" src="images/7.jpeg" alt="" loading="lazy">
           <div class="bento-card-overlay"></div>
           <div class="bento-card-body">
+            <span class="service-hint">Click to view</span>
             <h3>Contracts Management</h3>
             <p>Contract administration, compliance alignment, and documentation control.</p>
           </div>
         </a>
 
-        <a class="bento-card bento-card--visual anim" href="#contact" id="service-design">
-          <img class="bento-card-img" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" loading="lazy">
+        <a class="bento-card bento-card--visual anim js-service-card" href="#services" id="service-design" data-service-index="7">
+          <img class="bento-card-img" src="images/8.jpeg" alt="" loading="lazy">
           <div class="bento-card-overlay"></div>
           <div class="bento-card-body">
+            <span class="service-hint">Click to view</span>
             <h3>Project and Programme Management</h3>
             <p>Programme coordination, scheduling, costing, and delivery governance.</p>
           </div>
         </a>
 
-        <a class="bento-card bento-card--visual anim" href="#contact" id="service-infra">
-          <img class="bento-card-img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" loading="lazy">
+        <a class="bento-card bento-card--visual anim js-service-card" href="#services" id="service-infra" data-service-index="8">
+          <img class="bento-card-img" src="images/9.jpeg" alt="" loading="lazy">
           <div class="bento-card-overlay"></div>
           <div class="bento-card-body">
+            <span class="service-hint">Click to view</span>
             <h3>Infrastructure Planning and Advisory</h3>
             <p>Scoping, feasibility, costing, and strategic infrastructure advisory.</p>
           </div>
         </a>
 
-        <a class="bento-card bento-card--visual anim" href="#contact" id="service-qa">
-          <img class="bento-card-img" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" loading="lazy">
+        <a class="bento-card bento-card--visual anim js-service-card" href="#services" id="service-qa" data-service-index="9">
+          <img class="bento-card-img" src="images/10.jpeg" alt="" loading="lazy">
           <div class="bento-card-overlay"></div>
           <div class="bento-card-body">
+            <span class="service-hint">Click to view</span>
             <h3>Geomatics</h3>
             <p>Surveying support, spatial data, and geomatic inputs for projects.</p>
           </div>
         </a>
 
-        <a class="bento-card bento-card--visual anim" href="#mentorship" id="service-mentor">
-          <img class="bento-card-img" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" loading="lazy">
+        <a class="bento-card bento-card--visual anim js-service-card" href="#services" id="service-mentor" data-service-index="10">
+          <img class="bento-card-img" src="images/11.jpeg" alt="" loading="lazy">
           <div class="bento-card-overlay"></div>
           <div class="bento-card-body">
-            <h3>Professional Mentorship</h3>
-            <p>SACPCMP PrCM and PrCPM preparation — templates, reviews, and interview coaching.</p>
+            <span class="service-hint">Click to view</span>
+            <h3>Tender Pricing</h3>
+            <p>RFQ and tender document estimation — accurate cost build-ups for competitive, compliant bids.</p>
           </div>
         </a>
       </div>
@@ -433,32 +518,31 @@
     </div>
   </section>
 
-  <!-- Mentorship -->
-  <section class="section mentor-section" id="mentorship" data-section="mentorship">
+  <!-- Tender pricing -->
+  <section class="section mentor-section" id="tender-pricing" data-section="mentorship">
     <div class="wrap">
       <div class="section-head anim">
-        <span class="label">Mentoring &amp; coaching</span>
-        <h2 class="heading">SACPCMP professional pathways</h2>
-        <p class="lead">Structured support for aspirant Pr CM and Pr CPM professionals — contact us to discuss your registration journey.</p>
+        <span class="label">Tender pricing &amp; estimation</span>
+        <h2 class="heading">Professional tender pricing</h2>
+        <p class="lead">Accurate RFQ and tender document pricing — clear cost estimates that help you bid with confidence.</p>
       </div>
 
-      <!-- Road to Registration Events -->
-      <div class="road-banner anim" id="mentorship-events">
+      <div class="road-banner anim" id="tender-process">
         <div class="road-banner-glow" aria-hidden="true"></div>
         <div class="road-banner-top">
-          <span class="road-badge">2026 Programme</span>
-          <h3>Road to Registration</h3>
-          <p class="road-subtitle">SACPCMP Mentorship Programme</p>
-          <p class="road-for">For Pr CM and Pr CPM aspirants</p>
+          <span class="road-badge">Pricing services</span>
+          <h3>From RFQ to priced tender</h3>
+          <p class="road-subtitle">Tender pricing &amp; estimation</p>
+          <p class="road-for">For contractors, consultants, and project owners</p>
         </div>
 
         <div class="road-window anim anim-d1">
           <div class="road-window-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
           </div>
           <div>
-            <span class="road-window-label">SACPCMP application window</span>
-            <strong>01 July — 14 August 2026</strong>
+            <span class="road-window-label">What we price</span>
+            <strong>RFQs, bills of quantities &amp; full tender packs</strong>
           </div>
         </div>
 
@@ -466,104 +550,104 @@
           <li class="road-stop anim-scale">
             <span class="road-num">01</span>
             <div class="road-stop-body">
-              <time datetime="2026-07-01">01 Jul — 31 Jul 2026</time>
+              <time>Scope review</time>
+              <span class="road-phase">Documents &amp; specs</span>
             </div>
           </li>
           <li class="road-stop intensive anim">
             <span class="road-num">02</span>
             <div class="road-stop-body">
-              <time datetime="2026-08-03">03 Aug — 14 Aug 2026</time>
-              <span class="road-phase">Intensive block</span>
+              <time>Quantify</time>
+              <span class="road-phase">Measure &amp; build-up</span>
             </div>
           </li>
           <li class="road-stop anim">
             <span class="road-num">03</span>
             <div class="road-stop-body">
-              <time datetime="2026-08-24">24 Aug — 30 Sep 2026</time>
+              <time>Price</time>
+              <span class="road-phase">Rates &amp; allowances</span>
             </div>
           </li>
           <li class="road-stop anim">
             <span class="road-num">04</span>
             <div class="road-stop-body">
-              <time datetime="2026-10-01">01 Oct — 30 Oct 2026</time>
+              <time>Check</time>
+              <span class="road-phase">Risk &amp; compliance</span>
             </div>
           </li>
           <li class="road-stop anim">
             <span class="road-num">05</span>
             <div class="road-stop-body">
-              <time datetime="2026-11-02">02 Nov — 20 Nov 2026</time>
+              <time>Deliver</time>
+              <span class="road-phase">Priced return</span>
             </div>
           </li>
         </ol>
 
         <div class="road-cta">
-          <a href="#contact" class="btn btn-solid">Enquire about the programme</a>
+          <a href="#contact" class="btn btn-solid">Request a pricing quote</a>
         </div>
       </div>
 
-      <div class="mentor-tabs anim" id="mentorship-routes">
-        <div class="mentor-tab-list" role="tablist" aria-label="Mentorship information">
-          <button class="mentor-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-programmes" id="tab-btn-programmes" data-tab="programmes">Programmes</button>
-          <button class="mentor-tab" type="button" role="tab" aria-selected="false" aria-controls="tab-routes" id="tab-btn-routes" data-tab="routes">Registration routes</button>
+      <div class="mentor-tabs anim" id="tender-routes">
+        <div class="mentor-tab-list" role="tablist" aria-label="Tender pricing information">
+          <button class="mentor-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-programmes" id="tab-btn-programmes" data-tab="programmes">What we offer</button>
+          <button class="mentor-tab" type="button" role="tab" aria-selected="false" aria-controls="tab-routes" id="tab-btn-routes" data-tab="routes">How it works</button>
         </div>
 
         <div class="mentor-tab-panel is-active" id="tab-programmes" role="tabpanel" aria-labelledby="tab-btn-programmes">
       <div class="mentor-split mentor-split-three mentor-split-compact">
-        <article class="program-card program-card--compact highlight anim" id="mentorship-prcpm">
+        <article class="program-card program-card--compact highlight anim" id="tender-rfq">
           <div class="program-card-head">
-            <span class="tag">Pr CPM</span>
-            <h3>Professional Construction Project Manager</h3>
+            <span class="tag">RFQ</span>
+            <h3>RFQ pricing</h3>
           </div>
           <div class="program-card-body">
-            <p>Management of the construction process from conception to completion, including related professional services.</p>
+            <p>Fast, accurate pricing for requests for quotation — aligned to your scope, specs, and supplier constraints.</p>
             <ul class="program-list">
-              <li>Certification requirements &amp; experience mapping</li>
-              <li>CV, profiles &amp; project report guidance</li>
-              <li>Professional interview preparation</li>
+              <li>Scope &amp; specification review</li>
+              <li>Itemised cost build-up</li>
+              <li>Competitive rate guidance</li>
             </ul>
           </div>
-          <a href="#contact" class="btn btn-brand btn-sm">Enquire about PrCPM</a>
+          <a href="#contact" class="btn btn-brand btn-sm">Enquire about RFQ pricing</a>
         </article>
 
-        <article class="program-card program-card--compact anim anim-d1" id="mentorship-prcm">
+        <article class="program-card program-card--compact anim anim-d1" id="tender-docs">
           <div class="program-card-head">
-            <span class="tag">Pr CM</span>
-            <h3>Professional Construction Manager</h3>
+            <span class="tag">Tender</span>
+            <h3>Tender document estimation</h3>
           </div>
           <div class="program-card-body">
-            <p>Single-point responsibility for coordinating, administering, and managing construction resources.</p>
+            <p>Full tender pack estimation for civil, construction, and related works — ready for submission review.</p>
             <ul class="program-list">
-              <li>Certification requirements &amp; experience mapping</li>
-              <li>CV, profiles &amp; project report guidance</li>
-              <li>Professional interview preparation</li>
+              <li>BOQ / schedule pricing</li>
+              <li>Labour, plant &amp; material build-up</li>
+              <li>Preliminaries &amp; contingency advice</li>
             </ul>
           </div>
-          <a href="#contact" class="btn btn-brand btn-sm">Enquire about PrCM</a>
+          <a href="#contact" class="btn btn-brand btn-sm">Enquire about tender pricing</a>
         </article>
 
-        <article class="program-card program-card--compact criteria-card anim anim-d2" id="mentorship-prcm-criteria">
+        <article class="program-card program-card--compact criteria-card anim anim-d2" id="tender-support">
           <div class="program-card-head">
-            <span class="tag">Pr CM Or Pr CPM · Criteria</span>
-            <h3>Registration Criteria for Pr CM and Pr CPM </h3>
+            <span class="tag">Support</span>
+            <h3>What you receive</h3>
           </div>
           <div class="program-card-body criteria-scroll">
-            <p class="criteria-intro">An applicant who wishes to apply for registration as Pr CM and Pr CPM shall possess at a minimum the following:</p>
+            <p class="criteria-intro">Our tender pricing support is practical and submission-ready:</p>
             <div class="criteria-block">
-              <h4>a) Qualification requirements</h4>
+              <h4>Deliverables</h4>
               <ul class="criteria-list">
-                <li>BSc Hons Construction Management NQF Level 8, 480 Credits</li>
-                <li>Post-graduate Diploma in Construction Management (NQF Level 8, 480 Credits)</li>
-                <li>Bachelors of the Built Environment Honours in Construction Studies (NQF Level 8, 480 Credits)</li>
-                <li>BSc Hons in Construction Project Management (NQF Level 8, 480 Credits)</li>
-                <li>RPL Certificate</li>
+                <li>Priced schedules / BOQ returns</li>
+                <li>Clear assumptions and exclusions</li>
+                <li>Rate build-up notes where required</li>
+                <li>Risk flags before you submit</li>
               </ul>
-              <p class="criteria-status"><strong>Status:</strong> SACPCMP Accredited <em>(including accredited and phased out HEQSF non-aligned qualifications obtained before June 2024)</em></p>
-              <p class="criteria-equiv">An Equivalent Built Environment Qualification on the Recognition List (Annexure A) at NQF Level 8, 480 Credits</p>
-              <p class="criteria-status"><strong>Status:</strong> Subjected to educational evaluation</p>
             </div>
             <div class="criteria-block">
-              <h4>b) Years of experience requirement</h4>
-              <p>Minimum of five (5) years relevant practical experience</p>
+              <h4>Sectors we cover</h4>
+              <p>Civil works, road construction, steel fixing, materials testing, environmental / soil treatments, and related built-environment packages.</p>
             </div>
           </div>
         </article>
@@ -573,40 +657,39 @@
         <div class="mentor-tab-panel" id="tab-routes" role="tabpanel" aria-labelledby="tab-btn-routes" hidden>
           <div class="routes-grid">
             <article class="route-card route-card--light anim">
-              <span class="route-criteria-label">1st Criteria</span>
-              <span class="route-pill">Non-Candidate Route</span>
+              <span class="route-criteria-label">Step 01</span>
+              <span class="route-pill">Share documents</span>
               <div class="route-requirements">
-                <p><strong>Honours NQF L8</strong> — minimum 5 years post-qualification project management experience is required.</p>
+                <p>Send your RFQ or tender pack — drawings, specs, BOQ, and any clarifications already issued.</p>
               </div>
               <div class="route-fees">
-                <h4>SACPCMP Fee</h4>
+                <h4>We need</h4>
                 <ul class="route-fee-list">
-                  <li><span class="fee-check" aria-hidden="true"></span> R3 239,28 <em>[Application]</em></li>
-                  <li><span class="fee-check" aria-hidden="true"></span> R5 343,38 <em>[Interview]</em></li>
-                  <li><span class="fee-check" aria-hidden="true"></span> R1 652,92 <em>[Registration]</em></li>
-                  <li><span class="fee-check" aria-hidden="true"></span> R5 639,23 <em>[Annual Fee]</em></li>
+                  <li><span class="fee-check" aria-hidden="true"></span> Scope documents</li>
+                  <li><span class="fee-check" aria-hidden="true"></span> Bills / schedules</li>
+                  <li><span class="fee-check" aria-hidden="true"></span> Closing date</li>
+                  <li><span class="fee-check" aria-hidden="true"></span> Site constraints</li>
                 </ul>
               </div>
-              <a href="#contact" class="route-apply route-apply--dark">Apply Now</a>
+              <a href="#contact" class="route-apply route-apply--dark">Send documents</a>
             </article>
 
             <article class="route-card route-card--light anim anim-d1">
-              <span class="route-criteria-label">2nd Criteria</span>
-              <span class="route-pill">RPL Route</span>
+              <span class="route-criteria-label">Step 02</span>
+              <span class="route-pill">Receive priced return</span>
               <div class="route-requirements">
-                <p>Grade 12 &amp; other qualifications that are not built environment related — 10 years project management experience.</p>
+                <p>We quantify, price, and return a clear estimate you can use for bidding or client submission.</p>
               </div>
               <div class="route-fees">
-                <h4>SACPCMP Fee</h4>
+                <h4>You get</h4>
                 <ul class="route-fee-list">
-                  <li><span class="fee-check" aria-hidden="true"></span> R4 880,18 <em>[Application]</em></li>
-                  <li><span class="fee-check" aria-hidden="true"></span> R4 880,18 <em>[RPL Fee]</em></li>
-                  <li><span class="fee-check" aria-hidden="true"></span> R6 506,91 <em>[Interview]</em></li>
-                  <li><span class="fee-check" aria-hidden="true"></span> R1 652,92 <em>[Registration]</em></li>
-                  <li><span class="fee-check" aria-hidden="true"></span> R5 639,23 <em>[Annual Fee]</em></li>
+                  <li><span class="fee-check" aria-hidden="true"></span> Priced return</li>
+                  <li><span class="fee-check" aria-hidden="true"></span> Assumptions list</li>
+                  <li><span class="fee-check" aria-hidden="true"></span> Risk notes</li>
+                  <li><span class="fee-check" aria-hidden="true"></span> Follow-up support</li>
                 </ul>
               </div>
-              <a href="#contact" class="route-apply route-apply--dark">Apply Now</a>
+              <a href="#contact" class="route-apply route-apply--dark">Request pricing</a>
             </article>
           </div>
         </div>
@@ -614,39 +697,29 @@
 
       <div class="mentor-emails">
         <div class="mentor-email-card anim">
-          <h4>Mentorship enquiries</h4>
-          <a href="mailto:mentorship@hggongsconsulting.co.za">mentorship@hggongsconsulting.co.za</a>
+          <h4>Tender pricing enquiries</h4>
+          <a href="mailto:info@thomani.co.za">info@thomani.co.za</a>
         </div>
         <div class="mentor-email-card anim anim-d1">
           <h4>General information</h4>
-          <a href="mailto:info@hggongsconsulting.co.za">info@hggongsconsulting.co.za</a>
+          <a href="mailto:info@thomani.co.za">info@thomani.co.za</a>
         </div>
       </div>
 
-      <div class="downloads-panel anim" id="mentorship-documents">
+      <div class="downloads-panel anim" id="tender-documents">
         <div class="downloads-head">
-          <h3>Registration resources</h3>
-          <p>Download SACPCMP templates and reference documents directly from our website or the <a href="https://sacpcmp.org.za/" target="_blank" rel="noopener noreferrer">SACPCMP</a> website.</p>
+          <h3>Project documents</h3>
+          <p>Download appointment and project reference documents related to our construction and pricing workstreams.</p>
         </div>
         <div class="downloads-grid">
-          <a class="download-card" href="documents/sacpcmp-rules-for-registration.pdf" download>
+          <a class="download-card" href="documents/subcontractor-steel-fixing-setting-out-western-tvet.pdf" download>
             <span class="download-type">PDF</span>
-            <strong>SACPCMP Rules for Registration</strong>
+            <strong>Subcontractor Appointment — Steel Fixing &amp; Setting Out (Western TVET)</strong>
             <span class="download-btn">Download</span>
           </a>
-          <a class="download-card" href="documents/idow-pr-cm-pr-cpm.pdf" download>
+          <a class="download-card" href="documents/subcontractor-materials-testing-soil-poisoning.pdf" download>
             <span class="download-type">PDF</span>
-            <strong>IDOW — Pr CM and Pr CPM</strong>
-            <span class="download-btn">Download</span>
-          </a>
-          <a class="download-card" href="documents/pcm-success-failure-report-template.docx" download>
-            <span class="download-type">Word</span>
-            <strong>PCM Success and Failure Report Template</strong>
-            <span class="download-btn">Download</span>
-          </a>
-          <a class="download-card" href="documents/sacpcpm-project-profile.docx" download>
-            <span class="download-type">Word</span>
-            <strong>SACPCMP Project Profile</strong>
+            <strong>Subcontractor Appointment — Materials Testing &amp; Soil Poisoning</strong>
             <span class="download-btn">Download</span>
           </a>
         </div>
@@ -654,45 +727,45 @@
 
       <div class="support-panel anim">
         <div>
-          <h3>Registration support</h3>
-          <p>Virtual sessions — you populate council-aligned templates; we review, guide, and prepare you for interview success.</p>
+          <h3>Why clients use our pricing</h3>
+          <p>We combine site-aware construction experience with disciplined cost estimation so your numbers are competitive, complete, and defensible.</p>
         </div>
         <ul class="check-grid">
-          <li>CV &amp; profile templates</li>
-          <li>Project report coaching</li>
-          <li>Logbook structure</li>
-          <li>Submission review</li>
-          <li>Successes &amp; failures reports</li>
-          <li>Interview preparation</li>
+          <li>RFQ turnaround</li>
+          <li>Full tender packs</li>
+          <li>BOQ build-up</li>
+          <li>Rate benchmarking</li>
+          <li>Risk allowances</li>
+          <li>Clarification support</li>
         </ul>
       </div>
 
       <div class="faq-grid anim">
         <div class="faq-block">
           <button class="faq-trigger" type="button" aria-expanded="false">
-            Do I need a mentor signature like ECSA?
+            What documents do you need to price an RFQ?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-body">
-            <p>Only when registering as a candidate CPM/CM. Non-candidate submissions do not require a mentor — we help you choose the right pathway.</p>
+            <p>Share the RFQ invitation, drawings or specs, quantities where available, and your required return date. The clearer the pack, the faster and more accurate the estimate.</p>
           </div>
         </div>
         <div class="faq-block">
           <button class="faq-trigger" type="button" aria-expanded="false">
-            Can I reuse my ECSA report for SACPCMP?
+            Can you price a full tender document?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-body">
-            <p>No. SACPCMP and ECSA assess different outcomes. Use SACPCMP prescribed forms and templates — we guide you through that process.</p>
+            <p>Yes. We estimate full tender packs including schedules of quantities, preliminaries guidance, and rate build-up notes to support your submission.</p>
           </div>
         </div>
         <div class="faq-block">
           <button class="faq-trigger" type="button" aria-expanded="false">
-            How does Thomani assist with registration?
+            How do I request tender pricing?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-body">
-            <p>Templates for CV, profiles, project report guidance; structured review against council requirements; and professional interview coaching — all delivered virtually.</p>
+            <p>Email info@thomani.co.za or use the contact form — include your documents and closing date, and we will confirm scope, timeline, and next steps.</p>
           </div>
         </div>
       </div>
@@ -708,20 +781,94 @@
       </div>
       <div class="project-cards reveal-stagger">
         <article class="project-tile anim-scale">
-          <span class="cat">Civil &amp; PM</span>
-          <h3>Municipal infrastructure programme</h3>
+          <span class="cat">Civil engineering</span>
+          <h3>Steel fixing and related concrete works</h3>
           <p>Multi-phase planning, design coordination, and construction management for community infrastructure rollout.</p>
         </article>
         <article class="project-tile anim">
-          <span class="cat">Construction</span>
-          <h3>Commercial refurbishment</h3>
+          <span class="cat">Road Construction</span>
+          <h3>Material Testing</h3>
           <p>Contractor coordination, quality inspections, and practical completion management.</p>
         </article>
         <article class="project-tile anim">
-          <span class="cat">Advisory</span>
-          <h3>Water reticulation review</h3>
+          <span class="cat">Road construction</span>
+          <h3>Herbicide and ant poisoning</h3>
           <p>Independent engineering review and recommendations for network improvements.</p>
         </article>
+        <article class="project-tile anim">
+          <span class="cat">Civil engineering</span>
+          <h3>Steel fixing &amp; setting out — Western TVET Randfontein</h3>
+          <p>Subcontractor appointment for steel fixing and setting-out works on the Western TVET College Randfontein project.</p>
+        </article>
+        <article class="project-tile anim">
+          <span class="cat">Materials &amp; environmental</span>
+          <h3>Construction materials testing &amp; soil poisoning</h3>
+          <p>Subcontractor appointment for construction materials testing and soil poisoning services on active project sites.</p>
+        </article>
+      </div>
+
+      <div class="project-galleries-scroll" data-project-galleries>
+        <div class="project-galleries-sticky">
+          <div class="project-galleries-track" data-project-galleries-track>
+            <div class="project-gallery" id="mwelase-gallery">
+              <div class="project-gallery-head">
+                <span class="label" style="color: var(--brand-glow);">Mwelase steel fixing</span>
+                <h3 class="project-gallery-title">Site photo collage</h3>
+                <p>Steel fixing and related concrete works captured on site.</p>
+              </div>
+              <div class="steel-collage" aria-label="Mwelase steel fixing project photos">
+                <figure class="steel-collage-item steel-collage-item--lg"><img src="images/1.jpeg" alt="Mwelase steel fixing photo 1" loading="lazy"></figure>
+                <figure class="steel-collage-item"><img src="images/2.jpeg" alt="Mwelase steel fixing photo 2" loading="lazy"></figure>
+                <figure class="steel-collage-item"><img src="images/3.jpeg" alt="Mwelase steel fixing photo 3" loading="lazy"></figure>
+                <figure class="steel-collage-item steel-collage-item--wide"><img src="images/4.jpeg" alt="Mwelase steel fixing photo 4" loading="lazy"></figure>
+                <figure class="steel-collage-item"><img src="images/5.jpeg" alt="Mwelase steel fixing photo 5" loading="lazy"></figure>
+                <figure class="steel-collage-item"><img src="images/6.jpeg" alt="Mwelase steel fixing photo 6" loading="lazy"></figure>
+                <figure class="steel-collage-item steel-collage-item--tall"><img src="images/7.jpeg" alt="Mwelase steel fixing photo 7" loading="lazy"></figure>
+                <figure class="steel-collage-item"><img src="images/8.jpeg" alt="Mwelase steel fixing photo 8" loading="lazy"></figure>
+                <figure class="steel-collage-item"><img src="images/9.jpeg" alt="Mwelase steel fixing photo 9" loading="lazy"></figure>
+                <figure class="steel-collage-item steel-collage-item--wide"><img src="images/10.jpeg" alt="Mwelase steel fixing photo 10" loading="lazy"></figure>
+                <figure class="steel-collage-item"><img src="images/11.jpeg" alt="Mwelase steel fixing photo 11" loading="lazy"></figure>
+              </div>
+            </div>
+
+            <div class="project-gallery" id="materials-gallery">
+              <div class="project-gallery-head">
+                <span class="label" style="color: var(--brand-glow);">Material testing</span>
+                <h3 class="project-gallery-title">Testing gallery</h3>
+                <p>Scroll through material testing project photos.</p>
+              </div>
+              <div class="materials-carousel" data-materials-carousel>
+                <button type="button" class="materials-nav materials-prev" data-materials-prev aria-label="Previous photo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <div class="materials-track" data-materials-track tabindex="0" aria-label="Material testing photos">
+                  <article class="materials-slide is-active">
+                    <img src="images/one.jpeg" alt="Material testing photo 1" loading="lazy">
+                  </article>
+                  <article class="materials-slide">
+                    <img src="images/two.jpeg" alt="Material testing photo 2" loading="lazy">
+                  </article>
+                  <article class="materials-slide">
+                    <img src="images/three.jpeg" alt="Material testing photo 3" loading="lazy">
+                  </article>
+                  <article class="materials-slide">
+                    <img src="images/four.jpeg" alt="Material testing photo 4" loading="lazy">
+                  </article>
+                  <article class="materials-slide">
+                    <img src="images/five.jpeg" alt="Material testing photo 5" loading="lazy">
+                  </article>
+                  <article class="materials-slide">
+                    <img src="images/six.jpg" alt="Material testing photo 6" loading="lazy">
+                  </article>
+                </div>
+                <button type="button" class="materials-nav materials-next" data-materials-next aria-label="Next photo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+              </div>
+              <div class="materials-dots" data-materials-dots aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -803,7 +950,7 @@
               <span class="meta-item"><svg class="icon-meta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.5 2 3 6 3s6-1.5 6-3v-5"/></svg> BTech / BEng Civil</span>
             </div>
           </div>
-          <a href="mailto:info@hggongsconsulting.co.za?subject=Application: Civil Engineer" class="job-apply">Apply <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="mailto:info@thomani.co.za?subject=Application: Civil Engineer" class="job-apply">Apply <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </article>
 
         <article class="job-card anim">
@@ -815,7 +962,7 @@
               <span class="meta-item"><svg class="icon-meta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.5 2 3 6 3s6-1.5 6-3v-5"/></svg> SACPCMP Preferred</span>
             </div>
           </div>
-          <a href="mailto:info@hggongsconsulting.co.za?subject=Application: Construction Manager" class="job-apply">Apply <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="mailto:info@thomani.co.za?subject=Application: Construction Manager" class="job-apply">Apply <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </article>
 
         <article class="job-card anim">
@@ -827,7 +974,7 @@
               <span class="meta-item"><svg class="icon-meta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.5 2 3 6 3s6-1.5 6-3v-5"/></svg> Pr CPM / PM Qualification</span>
             </div>
           </div>
-          <a href="mailto:info@hggongsconsulting.co.za?subject=Application: Project Manager" class="job-apply">Apply <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="mailto:info@thomani.co.za?subject=Application: Project Manager" class="job-apply">Apply <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </article>
 
         <article class="job-card anim">
@@ -839,7 +986,7 @@
               <span class="meta-item"><svg class="icon-meta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Built Environment Graduates</span>
             </div>
           </div>
-          <a href="mailto:info@hggongsconsulting.co.za?subject=Application: Graduate Programme" class="job-apply">Apply <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="mailto:info@thomani.co.za?subject=Application: Graduate Programme" class="job-apply">Apply <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </article>
       </div>
     </div>
@@ -860,8 +1007,9 @@
               <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.92.33 1.86.57 2.81.7a2 2 0 011.72 2.25z"/></svg>
             </div>
             <div>
-              <h4>Mobile</h4>
-              <a href="tel:0767911676">076 7911 676</a>
+              <h4>Phone</h4>
+              <a href="tel:0678542627">067 854 2627</a>
+              <a href="tel:0766487205">076 648 7205</a>
             </div>
           </div>
           <div class="contact-card">
@@ -870,21 +1018,22 @@
             </div>
             <div>
               <h4>Email</h4>
-              <a href="mailto:info@hggongsconsulting.co.za">info@hggongsconsulting.co.za</a>
+              <a href="mailto:info@thomani.co.za">info@thomani.co.za</a>
             </div>
           </div>
           <div class="contact-card">
             <div class="contact-card-icon">
-              <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <h4>Managing Director</h4>
-              <p>Mr Vusimuzi Valoyi · Pr CM</p>
+              <h4>Address</h4>
+              <p>Stand No 364, Budeli,<br>Thohoyandou, Limpopo, 0950</p>
+              <a class="contact-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Stand+No+364,+Budeli,+Thohoyandou,+Limpopo,+0950" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
             </div>
           </div>
         </div>
 
-        <form class="contact-form anim anim-d1" id="contactForm" action="https://formsubmit.co/ajax/info@hggongsconsulting.co.za" method="POST">
+        <form class="contact-form anim anim-d1" id="contactForm" action="https://formsubmit.co/ajax/info@thomani.co.za" method="POST">
           <h3>Send a message</h3>
           <p class="sub">We respond within one business day.</p>
           <input type="hidden" name="_subject" value="Website enquiry — Thomani Consulting">
@@ -910,20 +1059,32 @@
               <option value="" disabled selected>Select…</option>
               <option>Engineering consulting</option>
               <option>Project management</option>
-              <option>PrCM mentorship</option>
-              <option>PrCPM mentorship</option>
-              <option>Road to Registration programme</option>
+              <option>Tender pricing / RFQ estimation</option>
+              <option>Construction management</option>
               <option>Careers / CV</option>
               <option>General</option>
             </select>
           </div>
           <div class="form-field">
             <label for="contact-message">Message</label>
-            <textarea id="contact-message" name="message" placeholder="Tell us about your project, mentorship goals, or career interest…" required></textarea>
+            <textarea id="contact-message" name="message" placeholder="Tell us about your project, tender pricing needs, or career interest…" required></textarea>
           </div>
           <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
           <button type="submit" class="btn-submit" id="contactSubmit">Send message</button>
         </form>
+      </div>
+
+      <div class="contact-map anim">
+        <div class="contact-map-frame">
+          <iframe
+            title="Map showing Stand No 364, Budeli, Thohoyandou, Limpopo"
+            src="https://maps.google.com/maps?q=Stand%20No%20364%2C%20Budeli%2C%20Thohoyandou%2C%20Limpopo%2C%200950&amp;z=15&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="contact-map-caption">Stand No 364, Budeli, Thohoyandou, Limpopo, 0950</p>
       </div>
     </div>
   </section>
@@ -948,7 +1109,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#leadership">Leadership</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#mentorship">Mentorship</a></li>
+          <li><a href="#tender-pricing">Tender pricing</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#community">Community</a></li>
           <li><a href="#careers">Careers</a></li>
@@ -959,15 +1120,17 @@
         <ul>
           <li><a href="#services">Civil engineering</a></li>
           <li><a href="#services">Project management</a></li>
-          <li><a href="#mentorship">SACPCMP mentoring</a></li>
-          <li><a href="#mentorship-events">Road to Registration</a></li>
+          <li><a href="#tender-pricing">Tender pricing</a></li>
+          <li><a href="#tender-pricing">RFQ estimation</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:0767911676">076 7911 676</a></li>
-          <li><a href="mailto:info@hggongsconsulting.co.za">info@hggongsconsulting.co.za</a></li>
+          <li><a href="tel:0678542627">067 854 2627</a></li>
+          <li><a href="tel:0766487205">076 648 7205</a></li>
+          <li><a href="mailto:info@thomani.co.za">info@thomani.co.za</a></li>
+          <li>Stand No 364, Budeli, Thohoyandou, Limpopo, 0950</li>
         </ul>
       </div>
     </div>

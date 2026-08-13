@@ -1,28 +1,27 @@
-# HG Gongs Consulting Engineers — Website
+# Thomani Consulting — Website
 
-Client website for **HG Gongs Consulting Engineers**, a South African multidisciplinary engineering and construction management firm.
+Company website for **Thomani Consulting**, a South African civil engineering, construction management, and tender pricing firm.
 
-**Live site:** [https://hggongsconsulting.co.za/](https://hggongsconsulting.co.za/)
+**Live site:** [https://jackychabalala.github.io/thomani-consulting/](https://jackychabalala.github.io/thomani-consulting/)
 
 ---
 
-## About this project
+## About
 
-This was a **client website build** for HG Gongs Consulting Engineers. The brief was to deliver a professional, mobile-friendly company site that presents their engineering services, leadership, and especially their **SACPCMP mentorship / Road to Registration** offering.
+A professional, mobile-friendly site for Thomani Consulting covering services, leadership, tender pricing, project galleries, careers, and contact.
 
-### What was needed
+### Highlights
 
-- Clear brand presence for HG Gongs Consulting Engineers
-- Homepage hero with strong messaging and calls to action
-- Company profile (“Who we are”) with vision, mission, and core business areas
-- Leadership / team section with real staff profiles
-- Services grid across civil, construction management, infrastructure, and mentorship
-- SACPCMP mentorship programme details, registration routes, fees, FAQs, and downloadable resources
-- Projects, social responsibility, careers, and contact sections
-- Working contact form (submissions to the company info email)
+- Brand presence for Thomani Consulting
+- Hero with construction messaging and tender pricing CTAs
+- Company profile, vision, mission, and core business areas
+- Team / leadership section
+- Services grid across civil, construction management, and related capabilities
+- Tender pricing & estimation section with project documents
+- Project galleries (Mwelase steel fixing collage, material testing carousel)
+- Social responsibility, careers, and contact form
 - Responsive layout for phone, tablet, and desktop
-- Mentorship welcome popup and scroll / interaction polish
-- Developer credit for [Chabala DevLab](https://chabalaladevlab.co.za)
+- Developed by [Chabala DevLab](https://chabalaladevlab.co.za)
 
 ---
 
@@ -30,14 +29,14 @@ This was a **client website build** for HG Gongs Consulting Engineers. The brief
 
 | | URL |
 |---|---|
-| **Live website** | [https://hggongsconsulting.co.za/](https://hggongsconsulting.co.za/) |
+| **Live website** | [https://jackychabalala.github.io/thomani-consulting/](https://jackychabalala.github.io/thomani-consulting/) |
+| **GitHub** | [https://github.com/JackyChabalala/thomani-consulting](https://github.com/JackyChabalala/thomani-consulting) |
 | **Developer** | [https://chabalaladevlab.co.za](https://chabalaladevlab.co.za) |
-| **SACPCMP** | [https://sacpcmp.org.za/](https://sacpcmp.org.za/) |
 
-**Contact (client)**  
-- Mobile: [076 7911 676](tel:0767911676)  
-- Email: [info@hggongsconsulting.co.za](mailto:info@hggongsconsulting.co.za)  
-- Mentorship: [mentorship@hggongsconsulting.co.za](mailto:mentorship@hggongsconsulting.co.za)
+**Contact**  
+- Phone: [067 854 2627](tel:0678542627) / [076 648 7205](tel:0766487205)  
+- Email: [info@thomani.co.za](mailto:info@thomani.co.za)  
+- Address: Stand No 364, Budeli, Thohoyandou, Limpopo, 0950
 
 ---
 
@@ -57,9 +56,9 @@ This was a **client website build** for HG Gongs Consulting Engineers. The brief
 │   ├── variables.css   # Design tokens
 │   └── styles.css      # Layout and components
 ├── js/
-│   └── main.js         # Nav, animations, form, tabs, popup
-├── images/             # Logos, team photos, assets
-├── documents/          # SACPCMP downloadable resources
+│   └── main.js         # Nav, animations, form, galleries, lightbox
+├── images/             # Logo, team photos, project galleries
+├── documents/          # Downloadable project PDFs
 └── README.md
 ```
 
@@ -70,18 +69,15 @@ This was a **client website build** for HG Gongs Consulting Engineers. The brief
 Open `index.html` in a browser, or serve the folder locally:
 
 ```bash
-# Example with Python
 python -m http.server 8080
 ```
 
 Then visit `http://localhost:8080`.
 
-> Note: the contact form uses FormSubmit and works best when tested on a live/public URL (not always from `file://`).
+> Note: the contact form uses FormSubmit and works best on a live/public URL (not always from `file://`).
 
 ---
 
-## Client
-
-Built for **HG Gongs Consulting Engineers** as a production company website.
+Built for **Thomani Consulting**.
 
 Developed by [Chabala DevLab](https://chabalaladevlab.co.za).
