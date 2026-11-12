@@ -704,20 +704,21 @@ body.menu-open .menu-toggle:active {
   position: relative;
   z-index: 1;
   font-family: var(--font-display);
-  font-size: clamp(28px, 7.2vw, 72px);
+  font-size: clamp(22px, 4vw, 36px);
   font-weight: 800;
-  line-height: 1.12;
+  line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--white);
   margin: 0 0 16px;
   width: 100%;
-  text-align: center;
+  text-align: left;
   overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(28px, 7.2vw, 72px);
+  font-size: clamp(26px, 5.2vw, 56px);
   font-weight: 800;
   line-height: 1.12;
   letter-spacing: -0.02em;
@@ -732,6 +733,7 @@ body.menu-open .menu-toggle:active {
   word-wrap: break-word;
   word-break: normal;
   hyphens: none;
+  text-align: left;
 }
 
 .hero-title em {
@@ -1373,6 +1375,7 @@ body.menu-open .menu-toggle:active {
   margin-bottom: 48px;
   justify-content: stretch;
   max-width: none;
+  align-items: stretch;
 }
 
 .team-card {
@@ -1382,6 +1385,9 @@ body.menu-open .menu-toggle:active {
   background: rgba(255, 255, 255, 0.04);
   transition: transform 0.3s var(--ease), box-shadow 0.3s;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .team-card:hover {
@@ -1502,13 +1508,16 @@ body.menu-open .menu-toggle:active {
 }
 
 .team-card--lead .team-info p {
-  font-size: 12px;
-  line-height: 1.55;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .team-info {
   padding: 24px;
   background: var(--white);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .team-info h4 {
@@ -1532,6 +1541,23 @@ body.menu-open .menu-toggle:active {
   font-size: 13px;
   color: var(--muted);
   line-height: 1.6;
+  flex: 1;
+}
+
+.team-email {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brand-mid);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.team-email:hover {
+  color: var(--brand);
+  text-decoration: underline;
 }
 
 .leader-band-inner {
@@ -3160,7 +3186,7 @@ body.lightbox-open {
   inset: 0;
   z-index: 0;
   background:
-    url("../images/back.jpg") center / cover no-repeat;
+    url("back.jpg") center / cover no-repeat;
   transform: scale(1.02);
 }
 
@@ -3199,16 +3225,13 @@ body.lightbox-open {
   gap: 20px;
 }
 
-@media (min-width: 769px) {
-  .project-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .project-cards .project-tile:nth-child(4) {
-    grid-column: 1;
-  }
-  .project-cards .project-tile:nth-child(5) {
-    grid-column: 2;
-  }
+.project-docs-section {
+  background: var(--white);
+  padding-top: 0;
+}
+
+.project-docs-section .downloads-panel {
+  margin-bottom: 0;
 }
 
 .project-tile {
@@ -3833,9 +3856,14 @@ body.lightbox-open {
   text-decoration: none;
   display: block;
   line-height: 1.45;
+  overflow-wrap: anywhere;
 }
-.contact-card a + a { margin-top: 2px; }
+.contact-card a + a { margin-top: 4px; }
 .contact-card a:hover { color: var(--brand); }
+
+.contact-card--team a {
+  font-size: 13px;
+}
 
 .contact-map-link {
   display: inline-block !important;
@@ -4197,16 +4225,10 @@ body.lightbox-open {
     aspect-ratio: 4 / 3;
     max-height: 340px;
   }
-  .hero-kicker,
   .hero-eyebrow {
     letter-spacing: 0.12em;
     font-size: 11px;
     text-align: center;
-  }
-  .hero-kicker {
-    font-size: clamp(26px, 8vw, 40px);
-    letter-spacing: -0.02em;
-    margin-bottom: 12px;
   }
   .hero-title,
   .hero-lead {

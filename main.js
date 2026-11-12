@@ -241,6 +241,31 @@
   const contactForm = document.getElementById('contactForm');
   const contactSubmit = document.getElementById('contactSubmit');
   const formStatus = document.getElementById('formStatus');
+  const contactType = document.getElementById('contact-type');
+  const contactSubject = document.getElementById('contactSubject');
+
+  var INFO_ENDPOINT = 'https://formsubmit.co/ajax/info@thomaniconsulting.co.za';
+  var PRICING_ENDPOINT = 'https://formsubmit.co/ajax/pricing@thomaniconsulting.co.za';
+
+  function isPricingEnquiry(value) {
+    return /tender pricing|rfq/i.test(value || '');
+  }
+
+  function syncContactRoute() {
+    if (!contactForm || !contactType) return;
+    var pricing = isPricingEnquiry(contactType.value);
+    contactForm.setAttribute('action', pricing ? PRICING_ENDPOINT : INFO_ENDPOINT);
+    if (contactSubject) {
+      contactSubject.value = pricing
+        ? 'Tender pricing enquiry — Thomani Consulting'
+        : 'Website enquiry — Thomani Consulting';
+    }
+  }
+
+  if (contactType) {
+    contactType.addEventListener('change', syncContactRoute);
+    syncContactRoute();
+  }
 
   function setFormStatus(message, type) {
     if (!formStatus) return;
@@ -258,8 +283,11 @@
         return;
       }
 
-      const endpoint = contactForm.getAttribute('action');
-      const formData = new FormData(contactForm);
+      syncContactRoute();
+      var endpoint = contactForm.getAttribute('action');
+      var formData = new FormData(contactForm);
+      var pricing = isPricingEnquiry(contactType && contactType.value);
+      var inboxLabel = pricing ? 'pricing@thomaniconsulting.co.za' : 'info@thomaniconsulting.co.za';
 
       contactSubmit.textContent = 'Sending…';
       contactSubmit.disabled = true;
@@ -274,6 +302,8 @@
         .then(function (res) {
           return res.json().then(function (data) {
             return { ok: res.ok, data: data };
+          }).catch(function () {
+            return { ok: res.ok, data: {} };
           });
         })
         .then(function (result) {
@@ -281,9 +311,10 @@
             throw new Error((result.data && result.data.message) || 'Unable to send message.');
           }
           contactForm.reset();
+          syncContactRoute();
           contactSubmit.textContent = 'Message sent';
           contactSubmit.classList.add('is-success');
-          setFormStatus('Thank you — your message was sent to info@thomani.co.za.', 'is-success');
+          setFormStatus('Thank you — your message was sent to ' + inboxLabel + '. A confirmation has been emailed to you.', 'is-success');
           setTimeout(function () {
             contactSubmit.textContent = 'Send message';
             contactSubmit.disabled = false;
@@ -293,7 +324,7 @@
         .catch(function () {
           contactSubmit.textContent = 'Send message';
           contactSubmit.disabled = false;
-          setFormStatus('Something went wrong. Please email info@thomani.co.za directly.', 'is-error');
+          setFormStatus('Something went wrong. Please email ' + inboxLabel + ' directly.', 'is-error');
         });
     });
   }

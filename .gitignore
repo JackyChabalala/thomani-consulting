@@ -1,23 +1,11 @@
-# OS
+﻿# OS / editor
 .DS_Store
 Thumbs.db
 Desktop.ini
-
-# Editor
+*.swp
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
 
-# Logs / temp
-*.log
-npm-debug.log*
-.cache/
-tmp/
-temp/
-
-# Env / secrets
-.env
-.env.*
-!.env.example
+# Netlify / local tooling
+.netlify/
+node_modules/
