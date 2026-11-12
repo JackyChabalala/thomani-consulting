@@ -16,6 +16,7 @@ Plain HTML, CSS, and JavaScript. No build step or framework.
 ├── variables.css       # Design tokens / CSS variables
 ├── main.js             # Interactions and animations
 ├── images/             # Logos, team photos, project gallery
+│   └── aluminium/      # Aluminium works portfolio photos
 ├── pdf/                # Downloadable project documents
 └── README.md
 ```

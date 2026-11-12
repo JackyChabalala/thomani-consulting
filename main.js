@@ -531,7 +531,7 @@
     if (!root) return;
     const nodes = Array.prototype.slice.call(root.querySelectorAll(imgSelector));
     nodes.forEach(function (img, index) {
-      const trigger = img.closest('.steel-collage-item, .materials-slide') || img;
+      const trigger = img.closest('.steel-collage-item, .aluminium-collage-item, .materials-slide') || img;
       trigger.setAttribute('tabindex', '0');
       trigger.setAttribute('role', 'button');
       trigger.setAttribute('aria-label', 'View photo full screen');
@@ -559,6 +559,11 @@
     document.getElementById('materials-gallery'),
     '.materials-slide img',
     'Material testing'
+  );
+  bindGalleryClicks(
+    document.getElementById('aluminium-works'),
+    '.aluminium-collage-item img',
+    'Aluminium works'
   );
 
   if (photoLightbox) {
