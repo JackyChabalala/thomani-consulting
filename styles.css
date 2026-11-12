@@ -1,4 +1,4 @@
-/* Thomani Consulting — complete layout (v2) */
+﻿/* Thomani Consulting — complete layout (v2) */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -37,7 +37,7 @@ a { color: inherit; }
   background: var(--grad-accent);
 }
 
-/* ── Header ── */
+/* â”€â”€ Header â”€â”€ */
 .site-header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -587,7 +587,7 @@ body.menu-open .menu-toggle:active {
 }
 .dev-credit img { height: 48px; margin: 0 auto; opacity: 0.85; }
 
-/* ── Buttons ── */
+/* â”€â”€ Buttons â”€â”€ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -635,7 +635,7 @@ body.menu-open .menu-toggle:active {
 }
 .btn-submit.is-success { background: var(--brand-mid); }
 
-/* ── Hero (split layout) ── */
+/* â”€â”€ Hero (split layout) â”€â”€ */
 .hero {
   min-height: 100vh;
   display: grid;
@@ -856,7 +856,7 @@ body.menu-open .menu-toggle:active {
   letter-spacing: 0.08em;
 }
 
-/* ── Section commons ── */
+/* â”€â”€ Section commons â”€â”€ */
 .section {
   padding: clamp(72px, 10vw, 120px) 0;
 }
@@ -967,7 +967,7 @@ body.menu-open .menu-toggle:active {
 .reveal-stagger > :nth-child(11) { --i: 10; }
 .reveal-stagger > :nth-child(12) { --i: 11; }
 
-/* ── About strip ── */
+/* â”€â”€ About strip â”€â”€ */
 .about-strip {
   background: var(--white);
 }
@@ -1296,7 +1296,7 @@ body.menu-open .menu-toggle:active {
   background: var(--brand-glow);
 }
 
-/* ── Our Team / Leadership ── */
+/* â”€â”€ Our Team / Leadership â”€â”€ */
 .team-section {
   position: relative;
   color: var(--white);
@@ -1627,7 +1627,7 @@ body.menu-open .menu-toggle:active {
   font-size: 13px;
 }
 
-/* ── Services bento ── */
+/* â”€â”€ Services bento â”€â”€ */
 .services-section { background: var(--surface); }
 
 .bento {
@@ -2186,7 +2186,7 @@ body.lightbox-open {
   overflow: hidden;
 }
 
-/* ── Process timeline ── */
+/* â”€â”€ Process timeline â”€â”€ */
 .process-section { background: var(--white); }
 
 .timeline {
@@ -2265,7 +2265,7 @@ body.lightbox-open {
   line-height: 1.6;
 }
 
-/* ── Mentorship ── */
+/* â”€â”€ Mentorship â”€â”€ */
 .mentor-section {
   background: linear-gradient(180deg, var(--surface) 0%, var(--white) 100%);
 }
@@ -3117,7 +3117,7 @@ body.lightbox-open {
   position: relative;
 }
 .check-grid li::before {
-  content: '✓';
+  content: 'âœ“';
   position: absolute;
   left: 0;
   color: var(--brand-glow);
@@ -3170,7 +3170,7 @@ body.lightbox-open {
 }
 .faq-body p { font-size: 15px; color: var(--muted); line-height: 1.75; }
 
-/* ── Projects marquee ── */
+/* â”€â”€ Projects marquee â”€â”€ */
 .projects-section {
   position: relative;
   color: var(--white);
@@ -3186,7 +3186,7 @@ body.lightbox-open {
   inset: 0;
   z-index: 0;
   background:
-    url("back.jpg") center / cover no-repeat;
+    url("images/back.jpg") center / cover no-repeat;
   transform: scale(1.02);
 }
 
@@ -3290,7 +3290,7 @@ body.lightbox-open {
   line-height: 1.65;
 }
 
-/* ── Project photo galleries ── */
+/* â”€â”€ Project photo galleries â”€â”€ */
 .project-galleries-scroll {
   margin-top: 56px;
   height: auto;
@@ -3604,7 +3604,7 @@ body.lightbox-open {
   }
 }
 
-/* ── Community / Social responsibility ── */
+/* â”€â”€ Community / Social responsibility â”€â”€ */
 .community-section {
   background: var(--white);
 }
@@ -3710,7 +3710,7 @@ body.lightbox-open {
   line-height: 1.65;
 }
 
-/* ── Careers ── */
+/* â”€â”€ Careers â”€â”€ */
 .careers-section {
   background: var(--surface);
 }
@@ -3794,7 +3794,7 @@ body.lightbox-open {
   flex-shrink: 0;
 }
 
-/* ── Contact ── */
+/* â”€â”€ Contact â”€â”€ */
 .contact-section { background: var(--white); }
 
 .contact-layout {
@@ -3985,7 +3985,7 @@ body.lightbox-open {
 
 .form-field textarea { min-height: 120px; resize: vertical; }
 
-/* ── Footer ── */
+/* â”€â”€ Footer â”€â”€ */
 .site-footer {
   background: var(--brand-dark);
   color: rgba(255, 255, 255, 0.75);
@@ -4069,7 +4069,7 @@ body.lightbox-open {
   filter: brightness(1.1);
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1200px) {
   .nav-desktop { display: none; }
   .menu-toggle { display: flex; flex-shrink: 0; }
