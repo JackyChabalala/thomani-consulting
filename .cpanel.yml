@@ -1,0 +1,19 @@
+---
+# cPanel Git Version Control deployment for Elitehost
+# Repository: thomani-consulting (branch: main)
+# Repo path:  /home/thomanic/repositories/thomani-consulting
+# Document root: /home/thomanic/public_html
+#
+# Only website assets are copied. .git, .github, .cpanel.yml, README.md,
+# .env, credentials, and development tooling are intentionally omitted.
+# Existing files in public_html that are not listed below are left alone
+# (no delete / wipe of the live directory).
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/thomanic/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp styles.css $DEPLOYPATH
+    - /bin/cp variables.css $DEPLOYPATH
+    - /bin/cp main.js $DEPLOYPATH
+    - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R pdf $DEPLOYPATH
